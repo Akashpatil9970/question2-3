@@ -1,0 +1,81 @@
+2nd question:-
+package thinkbridge;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class SecondQuestionScripting {
+
+	public static void main(String[] args) throws Exception 
+	   {
+		System.setProperty("webdriver.chrome.driver", "C:\\\\Users\\\\Admin\\\\Desktop\\\\Software\\\\chromedriver.exe");
+		WebDriver driver = new ChromeDriver();
+		//maximize the window
+		driver.manage().window().maximize();
+		
+		//Launch url
+		driver.get("http://jt-dev.azurewebsites.net/#/SignUp");
+		
+		
+		// dropdown handle
+		driver.findElement(By.xpath("//*[@id=\"language\"]/div[1]/span/span[2]/span")).click();
+		
+		// click on language 
+		driver.findElement(By.xpath("//*[@id=\"ui-select-choices-row-1-1\"]")).click();
+	     
+		//Fill in your name
+		driver.findElement(By.id("name")).sendKeys("Akash");
+		
+		//Fill organization name
+		driver.findElement(By.id("orgName")).sendKeys("Akash");
+		
+        //input email address 	
+		driver.findElement(By.id("singUpEmail")).sendKeys("akashpqa1@gmail.com");
+		
+		//click on "I agree to the Terms And Conditions"
+		driver.findElement(By.xpath("//*[@id=\"content\"]/div/div[3]/div/section/div[1]/form/fieldset/div[4]/label/span")).click();
+		
+		//click on "SignUp"
+		driver.findElement(By.xpath("//button[contains(text(), 'Begin')]")).click();
+	}
+	
+  
+  
+  
+  
+  
+	3rd question:-
+  
+  package thinkbridge;
+
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Thirdquestion {
+
+	public static void main(String[] args) {
+
+		System.setProperty("webdriver.chrome.driver", "C:\\\\Users\\\\Admin\\\\Desktop\\\\Software\\\\chromedriver.exe");
+		WebDriver driver = new ChromeDriver();
+		//maximize the window
+		driver.manage().window().maximize();
+		
+		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		
+		driver.get(" https://www.bestundertaking.net/NewConnection.aspx\r\n"+ "");
+		
+		// suggestions//
+		
+		// 1) CUSTOMER PORTAL FOR ONLINE APPLICATION should be on centre
+		// 2) In help field should not gievn terms by * because * is for mandatory fields
+		// 3) view photo here filed and view signature here filed should have some distance as per size of photo
+		// 4)Whether power supply address is same as billing address * & Whether you want to opt for Green Energy? * fields green box length should be same.
+		// 5) Look and feel issue:-*  I, the above referred applicant, agree and accept the conditions in "Declaration / Undertaking" with complete awareness about safety provisions in Law and promise to abide by them in word and spirit. 
+		
+  
+  
+	
+	
